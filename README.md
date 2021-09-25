@@ -1,2 +1,2 @@
 # Info
-This repositary contains some files for the Web-Development program at Humber College.
+This repositary contains some source files for the Web-Development program at Humber College.
