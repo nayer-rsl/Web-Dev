@@ -29,11 +29,9 @@ if (cartSum>threShold){
 	alert("Your shipping for this order will be free!");
 
 }
-//SEND OUTPUT TO CONSOLE
+//CREATING THE OUTPUT MESSAGE
 var strPrices= "Item prices: ";
-for ( var i = 0; i < shoppingCart.length ; ++i ){
-	strPrices+=shoppingCart[i]+ "|";
-}
-//Next statement is for removing the last |
-strPrices = strPrices.slice(0,strPrices.length-1);
+strPrices+=shoppingCart.join("|");
+
+//SEND OUTPUT TO CONSOLE
 console.log(strPrices);
