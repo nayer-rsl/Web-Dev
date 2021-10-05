@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Table</title>
+  </head>
+  <body>
+    <h1>Checkout</h1>
+      <h2>Order Summary</h2>
+
+      <table>
+        <thead>
+         <tr>
+            <th>Item</th>
+            <th>Qty</th>
+            <th>Amt</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        
+        <tbody>
+          <tr>
+            <td>The Big Book of Frame Construction</td>
+            <td>1</td>
+            <td>25.00</td>
+            <td>25.00</td>
+          </tr>
+        </tbody>
+
+        <tfoot>
+          <tr>
+            <th colspan="3">Tax</th>
+            <td>3.25</td>
+          </tr>
+          <tr>
+            <th colspan="3">TOTAL</th>
+            <td>28.25</td>
+          </tr>
+        </tfoot>
+        
+        <!--colspan=row-->
+        <!--rowspan=column-->
+
+      </table>
+
+      <h2>Order Form - Payment</h2>
+      <form method="get">
+        
+        <fieldset>
+          <legend>Customer/Shipping Info</legend>
+          <div>
+            <Label for="fname">First Name:</Label>
+            <input type="text" id="fname" name="fname" placeholder="e.g. John">
+          
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lname" placeholder="e.g. Smith">
+          </div>
+          <div>
+            <label for="E-add">Email:</label>
+            <input type="Email" id="E-add" name="E-add" placeholder="john.smith@test.com">
+          </div>
+          <div>
+            <label for="street">Street No:</label>
+            <input type="text" id="street" name="street" placeholder="e.g. 123 Fake Street">
+          </div>
+          <div>
+            <label for="City">City:</label>
+            <input type="text" id="City" name="City" placeholder="e.g. Toronto">
+
+            <label for="prov">Province:</label>
+            <select id="prov" name="prov">
+              <option value="">--Choose a Province--</option>
+              <option value="MB">Manitoba</option>
+              <option value="ON">Ontario</option>
+              <option value="QC">Quebec</option>
+            </select>
+          </div>
+          <div>
+            <label for="Post">Postal Code:</label>
+            <input type="text" id="Post" name="Post" placeholder="e.g. A1A 1A1">
+          </div>
+          
+        </fieldset>
+
+        <fieldset>
+          <legend>Billing</legend>
+          <fieldset>
+            <legend>Choose Card</legend>
+
+            <input type="Radio" id="MastC" name="method" value="MastC">
+            <label for="MastC">MasterCard</label>
+
+            <input type="Radio" id="Vis" name="method" value="Vis">
+            <label for="Vis">Visa</label>
+
+          </fieldset>
+          <div>
+            <label for="num">Card Number:</label>
+            <input type="number" inputmode="number" id="num" name="num">
+            
+          </div>
+          <div>
+            <label for="Expiry">Card Expiry:</label>
+            <input type="text" inputmode="number" id="Expiry" name="Expiry" placeholder="MM/YY">
+          </div>
+
+        </fieldset>
+
+        <button type="submit" id="submit" name="submit">Pay now</button>
+
+        
+      </form>
+  </body>
+
+</html>
