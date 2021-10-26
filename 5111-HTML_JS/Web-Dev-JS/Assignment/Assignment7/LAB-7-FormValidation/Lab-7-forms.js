@@ -14,7 +14,7 @@ var formHandle = document.forms.form_ship;
 
 formHandle.onsubmit = processForm;
 
-function processForm(){
+function processForm(shipInfo){
 	
 	//ACCESS THE ELEMENTS THROUGH THE "FORM HANDLE"
 	var nameValue = formHandle.f_Name;
@@ -33,6 +33,8 @@ function processForm(){
 		nameMsg.style.background = "red"; 
 		nameValue.focus(); 
 		return false;
+	}else{//Store data to object
+		shipInfo.name = nameValue.value;
 	}
 	if(idValue.value === "" || idValue.value === null){ 
 	
@@ -40,6 +42,8 @@ function processForm(){
 		idMsg.style.background = "red"; 
 		idValue.focus(); 
 		return false;
+	}else{//Store data to object
+		shipInfo.cid = idValue.value;
 	}
 	if(postalValue.value === "" || postalValue.value === null){ 
 		
@@ -47,6 +51,8 @@ function processForm(){
 		pcMsg.style.background = "red"; 
 		postalValue.focus(); 
 		return false;
+	}else{//Store data to object
+		shipInfo.pc = postalValue.value;
 	}
 	if(slctBox.value === "0" ){ 
 		
@@ -54,16 +60,20 @@ function processForm(){
 		sbMsg.style.background = "red"; 
 		slctBox.focus(); 
 		return false;
+	}else{//Store data to object
+		shipInfo.speed = courier;
+		shipInfo.cost = slctBox.value;
 	}
+	console.log(shipInfo);
 
-	//FILL THE THANKS FORM WITH DATA FROM USER
-	document.getElementById("thanksCustomer").innerHTML = nameValue.value;
+	//FILL THE THANKS FORM WITH DATA FROM DATA STORED IN SHIPINFO OBJECT
+	document.getElementById("thanksCustomer").innerHTML = shipInfo.name;
 
-	document.getElementById("thanksPC").innerHTML = idValue.value;
+	document.getElementById("thanksPC").innerHTML = shipInfo.pc;
 
-	document.getElementById("thanksCost").innerHTML = slctBox.value;
+	document.getElementById("thanksCost").innerHTML = shipInfo.cost;
 
-	document.getElementById("thanksSpeed").innerHTML = courier;
+	document.getElementById("thanksSpeed").innerHTML = shipInfo.speed;
 
 	//HIDE THE FIRST FORM AND SHOW THE SECOND FORM
 	document.getElementById("shippingForm").style.display="none";
