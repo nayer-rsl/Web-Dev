@@ -10,7 +10,7 @@ var shipInfo = {
 window.onload = function(){
 
 var formHandle = document.forms.form_ship;
-console.log(formHandle);
+
 
 formHandle.onsubmit = processForm;
 
@@ -18,12 +18,15 @@ function processForm(){
 	
 	//ACCESS THE ELEMENTS THROUGH THE "FORM HANDLE"
 	var nameValue = formHandle.f_Name;
-	console.log(nameValue);
-	var idValue = formHandle.f_Id;
-	console.log(idValue);
-	var postalValue = formHandle.f_pc;
-	console.log(postalValue);
 
+	var idValue = formHandle.f_Id;
+
+	var postalValue = formHandle.f_pc;
+
+	var slctBox = formHandle.f_speed;
+	
+	var courier = slctBox.options[slctBox.selectedIndex].text;
+	
 	//validating inputs againt empty string and null
 	if(nameValue.value === "" || nameValue.value === null){ 
 		nameMsg = document.getElementById("in_Name");
@@ -45,15 +48,26 @@ function processForm(){
 		postalValue.focus(); 
 		return false;
 	}
+	if(slctBox.value === "0" ){ 
+		
+		sbMsg = document.getElementById("in_Speed");
+		sbMsg.style.background = "red"; 
+		slctBox.focus(); 
+		return false;
+	}
 
 	//FILL THE THANKS FORM WITH DATA FROM USER
+	document.getElementById("thanksCustomer").innerHTML = nameValue.value;
+
 	document.getElementById("thanksPC").innerHTML = idValue.value;
 
-	document.getElementById("thanksCustomer").innerHTML = nameValue.value;
+	document.getElementById("thanksCost").innerHTML = slctBox.value;
+
+	document.getElementById("thanksSpeed").innerHTML = courier;
+
 	//HIDE THE FIRST FORM AND SHOW THE SECOND FORM
 	document.getElementById("shippingForm").style.display="none";
 	document.getElementById("thanks_msg").style.display= "inline";
-	console.log(document.getElementById("thanksCustomer").value);
 	//STOPING THE FORM FROM SUBMITTING
 	return false;
 }
