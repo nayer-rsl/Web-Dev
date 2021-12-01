@@ -1,0 +1,14 @@
+﻿@model Assignment3.Models.Teacher
+
+@{
+    ViewBag.Title = "Show";
+}
+
+<h2>This is the Information for this techer.</h2>
+<a class="nav" href="/Teacher/List">Back to Teachers</a>
+<h2>@Model.TeacherFname @Model.TeacherLname</h2>
+<div>Employee Number: @Model.EmployeeNumber</div>
+<div>Hire Date: @Model.HireDate</div>
+<div>Salary: @Model.Salary</div>
+
+
