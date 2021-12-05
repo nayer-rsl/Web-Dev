@@ -6,6 +6,8 @@ using System.Net.Http;
 using System.Web.Http;
 using Assignment3.Models;
 using MySql.Data.MySqlClient;
+using System.Diagnostics;
+using System.Web.Http.Cors;
 
 namespace Assignment3.Controllers
 {
@@ -126,7 +128,49 @@ namespace Assignment3.Controllers
             return SelectedTeacher;
 
         }
+        /// <summary>
+        /// Adds a new Teacher to the database
+        /// </summary>
+        /// <param name="NewTeacher">Teacher Object</param>
         
+        public void AddTeacher(Teacher NewTeacher)
+        {
+            //Create an instance of a connection
+            MySqlConnection Conn = School.AccessDatabase();
+            //open the connection between the web server and database
+            Conn.Open();
+
+            string query = "insert into teachers (teacherfname,teacherlname,employeenumber,hiredate,salary) values (@TeacherFname,@TeacherLname,@EmployeeNumber,@HireDate,@Salary)";            //new command for the databse
+            MySqlCommand cmd = Conn.CreateCommand();
+            cmd.CommandText = query;
+            cmd.Parameters.AddWithValue("@TeacherFname", NewTeacher.TeacherFname);
+            cmd.Parameters.AddWithValue("@TeacherLname", NewTeacher.TeacherLname);
+            cmd.Parameters.AddWithValue("@EmployeeNumber", NewTeacher.EmployeeNumber);
+            cmd.Parameters.AddWithValue("@HireDate", NewTeacher.HireDate);
+            cmd.Parameters.AddWithValue("@Salary", NewTeacher.Salary);
+
+            //DML operations
+            cmd.ExecuteNonQuery();
+            //Close connection
+            Conn.Close();
+
+
+        }
+
+        [HttpPost]
+        public void DeleteTeacher(int id)
+        {
+            MySqlConnection Conn = School.AccessDatabase();
+            Conn.Open();
+            string query = "Delete from teachers where teacherid=@id";
+            MySqlCommand cmd = Conn.CreateCommand();
+            cmd.CommandText = query;
+            cmd.Parameters.AddWithValue("@id", id);
+
+            cmd.ExecuteNonQuery();
+            Conn.Close();
+
+        }
 
     }
 }
