@@ -36,13 +36,13 @@ namespace Assignment3.Controllers
         {
             return View();
         }
-        
+
         // POST : Teacher/Create
         [HttpPost]
         [Route("Teacher/Create")]
         public ActionResult Create(string TeacherFname, string TeacherLname, string EmployeeNumber, DateTime HireDate, decimal Salary)
         {
-            Debug.WriteLine("First Name:"+TeacherFname+" Last Name:"+TeacherLname+" Employee Number:"+EmployeeNumber+" Hire Date:"+HireDate+ " Salary:"+Salary);
+            Debug.WriteLine("First Name:" + TeacherFname + " Last Name:" + TeacherLname + " Employee Number:" + EmployeeNumber + " Hire Date:" + HireDate + " Salary:" + Salary);
             //Redirect to the list of theachers
 
             //Access database
@@ -74,5 +74,38 @@ namespace Assignment3.Controllers
             return RedirectToAction("List");
 
         }
+        //render the update page given an id
+        [HttpGet]
+        [Route("Teacher/Update/{id}")]
+        public ActionResult Update(int id)
+        {
+            //find a teacher by its id
+            TeacherDataController Controller = new TeacherDataController();
+            Teacher SelectedTeacher = Controller.FindTeacher(id);
+            return View(SelectedTeacher);
+        }
+        //update the teacher and post the data to database
+        [HttpPost]
+        [Route("Teacher/Update/{id}")]
+        public ActionResult Update(int id, string TeacherFname, string TeacherLname, string EmployeeNumber, DateTime HireDate, decimal Salary)
+        {
+            //check the info
+            Debug.WriteLine("First Name:" + TeacherFname + " Last Name:" + TeacherLname + " Employee Number:" + EmployeeNumber + " Hire Date:" + HireDate + " Salary:" + Salary);
+
+            TeacherDataController Controller = new TeacherDataController();
+
+            Teacher SelectedTeacher = new Teacher();
+            SelectedTeacher.TeacherId = id;
+            SelectedTeacher.TeacherFname = TeacherFname;
+            SelectedTeacher.TeacherLname = TeacherLname;
+            SelectedTeacher.EmployeeNumber = EmployeeNumber;
+            SelectedTeacher.HireDate = HireDate;
+            SelectedTeacher.Salary = Salary;
+
+            Controller.UpdateTeacher(SelectedTeacher);
+
+            return RedirectToAction("Show/" + id);
+        }
+
     }
 }

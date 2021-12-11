@@ -171,6 +171,34 @@ namespace Assignment3.Controllers
             Conn.Close();
 
         }
+        /// <summary>
+        /// Updates Teacher data given the new information
+        /// </summary>
+        /// <param name="SelectedTeacher">Teacher information</param>
+        /// <returns>nothing</returns>
+        public void UpdateTeacher(Teacher SelectedTeacher)
+        {
+            MySqlConnection Conn = School.AccessDatabase();
+            Conn.Open();
+
+            //sql command
+            string query = "update teachers set teacherfname=@TeacherFname, teacherlname=@TeacherLname, employeenumber=@EmployeeNumber, hiredate=@HireDate, salary=@Salary where teacherid=@id";
+            MySqlCommand cmd = Conn.CreateCommand();
+            cmd.CommandText = query;
+            cmd.Parameters.AddWithValue("@TeacherFname", SelectedTeacher.TeacherFname);
+            cmd.Parameters.AddWithValue("@TeacherLname", SelectedTeacher.TeacherLname);
+            cmd.Parameters.AddWithValue("@EmployeeNumber", SelectedTeacher.EmployeeNumber);
+            cmd.Parameters.AddWithValue("@HireDate", SelectedTeacher.HireDate);
+            cmd.Parameters.AddWithValue("@Salary", SelectedTeacher.Salary);
+            cmd.Parameters.AddWithValue("@id", SelectedTeacher.TeacherId);
+
+
+            //DML operations
+            cmd.ExecuteNonQuery();
+            //Close connection
+            Conn.Close();
+
+        }
 
     }
 }

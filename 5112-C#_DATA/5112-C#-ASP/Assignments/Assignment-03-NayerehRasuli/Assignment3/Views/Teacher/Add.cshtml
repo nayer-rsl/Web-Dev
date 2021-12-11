@@ -8,25 +8,25 @@
 <form method="POST" action="/Teacher/Create">
     <div>
         <label class="title">First Name:</label>
-        <input type="text" name="TeacherFname" class="input" id="TeacherFname" placeholder="John"/>
+        <input style="max-width:200px; width:100%;" type="text" name="TeacherFname" class="input" id="TeacherFname" placeholder="John"/>
     </div>
     <div>
         <label class="title">Last Name:</label>
-        <input type="text" name="TeacherLname" class="input" id="TeacherLname" placeholder="Doe"/>
+        <input style="max-width:200px; width:100%;" type="text" name="TeacherLname" class="input" id="TeacherLname" placeholder="Doe"/>
     </div>
     <div>
         <label class="title">Employee Number:</label>
-        <input  type="text" name="EmployeeNumber" class="input" id="EmployeeNumber" placeholder="T123"/>
+        <input style="max-width:200px; width:100%;" type="text" name="EmployeeNumber" class="input" id="EmployeeNumber" placeholder="T123"/>
     </div>
     <div>
         <label class="title">Hire Date:</label>
-        <input placeholder="2021-12-30" textmode="Date" type="date" required pattern="\d{4}-\d{2}-\d{2}" name="HireDate" class="input" id="HireDate" placeholder="2021-01-01 00:00:00"/>
+        <input style="max-width:200px; width:100%;" placeholder="2021-12-30 12:00:00 AM" textmode="Date" type="datetime-local"  name="HireDate" class="input" id="HireDate"/>
 
     </div>
     <div>
-        <label class="title">Salary:</label>
+        <label  class="title">Salary:</label>
 
-        <input type="text" name="Salary" class="input" id="Salary" placeholder="100.100"/>
+        <input style="max-width:200px; width:100%;" type="number" name="Salary" class="input" id="Salary" placeholder="100.10" step="any"/>
     </div>
     <div id="button">
         <input id="submit" type="submit" value="Add Teacher">
@@ -37,9 +37,7 @@
        .title {
            padding:10px;
        }
-       input{
-           margin-left:10px;
-       }
+       
        form {
            width: 500px;
        }
