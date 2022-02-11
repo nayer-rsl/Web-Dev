@@ -1,0 +1,125 @@
+extends layout
+
+block layout-content
+  div.content
+    h1.page-title 
+    img#billboard.background-image(src="/images/EarringsCategory12.jpg", alt="A woman wearing earrings")
+
+    div.row.list_manage
+      div.inner.clearfix
+        form.form_sort(action="#" method="post")
+        div
+          h6.manage_title Sort by: 
+            select.select_styled.white_select#sort_list(name="sort_list")
+              option(value="1" data-sort="ladd") Most Popular
+              option(value="2" data-sort="ladd") Latest Added
+              option(value="3" selected="" data-sort="price") Price High - Low
+              option(value="4" data-sort="loc") Price Low - High
+
+    div.row.mt-5.Earrings
+      div.col-sm-6.col-md-4.col-lg-3.mt-3.category
+        div.thumbnail
+          a(aria-current="page", href="/Earrings")
+            img.prod(src="/images/anastasia-anastasia-cTM8psdeOTQ-unsplash.jpg", alt="Earrings")   
+            div.caption
+            h4.Thumbnail.mt-2 E001
+            p.price $65 CAD
+          button.btn.btn-light.stayBtn(type="submit") Add to Bag  
+
+      div.col-sm-6.col-md-4.col-lg-3.mt-3.category
+        div.thumbnail
+          a(aria-current="page", href="/Earrings")
+            img.prod(src="/images/nati-melnychuk-x6OpsgZpst4-unsplash.jpg", alt="Earrings")
+            div.caption
+            h4.Thumbnail.mt-2 E002
+            p.price $65 CAD
+          button.btn.btn-light.stayBtn(type="submit") Add to Bag
+          
+      div.col-sm-6.col-md-4.col-lg-3.mt-3.category
+        div.thumbnail
+          a(aria-current="page", href="/Earrings")
+            img.prod(src="/images/nati-melnychuk-uLNTM-FiiTc-unsplash.jpg", alt="Earrings")
+            div.caption
+            h4.Thumbnail.mt-2 E003
+            p.price $65 CAD
+          button.btn.btn-light.stayBtn(type="submit") Add to Bag
+
+      div.col-sm-6.col-md-4.col-lg-3.mt-3.category
+        div.thumbnail
+          a(aria-current="page", href="/Earrings")
+            img.prod(src="/images/mathilde-langevin-6ct8De_ExSU-unsplash.jpg", alt="Earrings")
+            div.caption
+            h4.Thumbnail.mt-2 E004
+            p.price $65 CAD
+          button.btn.btn-light.stayBtn(type="submit") Add to Bag            
+
+      div.col-sm-6.col-md-4.col-lg-3.mt-3.category
+        div.thumbnail
+          a(aria-current="page", href="/Earrings")
+            img.prod(src="/images/daihana-monares-oWFPDjxuyUM-unsplash.jpg", alt="Earrings")
+            div.caption
+            h4.Thumbnail.mt-2 E005
+            p.price $65 CAD
+          button.btn.btn-light.stayBtn(type="submit") Add to Bag
+
+      div.col-sm-6.col-md-4.col-lg-3.mt-3.category
+        div.thumbnail
+          a(aria-current="page", href="/Earrings")
+            img.prod(src="/images/julia-cheperis-GFI1sRmDaCs-unsplash.jpg", alt="Earrings")
+            div.caption
+            h4.Thumbnail.mt-2 E006
+            p.price $65 CAD
+          button.btn.btn-light.stayBtn(type="submit") Add to Bag
+
+      div.col-sm-6.col-md-4.col-lg-3.mt-3.category
+        div.thumbnail
+          a(aria-current="page", href="/Earrings")
+            img.prod(src="/images/ruan-richard-P4ygnsGkEvw-unsplash.jpg", alt="Earrings")
+            div.caption
+            h4.Thumbnail.mt-2 E007
+            p.price $65 CAD
+          button.btn.btn-light.stayBtn(type="submit") Add to Bag
+
+      div.col-sm-6.col-md-4.col-lg-3.mt-3.category
+        div.thumbnail
+          a(aria-current="page", href="/Earrings")
+            img.prod(src="/images/joeyy-lee-OibaEuEfpeg-unsplash.jpg", alt="Earrings")
+            div.caption
+            h4.Thumbnail.mt-2 E008
+            p.price $65 CAD
+          button.btn.btn-light.stayBtn(type="submit") Add to Bag
+      div.col-sm-6.col-md-4.col-lg-3.mt-3.category
+        div.thumbnail
+          a(aria-current="page", href="/Earrings")
+            img.prod(src="/images/cat-han-BJ3grTerqY4-unsplash.jpg", alt="Earrings")
+            div.caption
+            h4.Thumbnail.mt-2 E009
+            p.price $65 CAD
+          button.btn.btn-light.stayBtn(type="submit") Add to Bag
+
+      div.col-sm-6.col-md-4.col-lg-3.mt-3.category
+        div.thumbnail
+          a(aria-current="page", href="/Earrings")
+            img.prod(src="/images/kate-hliznitsova-P6NiFTyI294-unsplash.jpg", alt="Earrings")
+            div.caption
+            h4.Thumbnail.mt-2 E010
+            p.price $65 CAD
+          button.btn.btn-light.stayBtn(type="submit") Add to Bag
+
+      div.col-sm-6.col-md-4.col-lg-3.mt-3.category
+        div.thumbnail
+          a(aria-current="page", href="/Earrings")
+            img.prod(src="/images/nati-melnychuk-5ngCICAXiH0-unsplash.jpg", alt="Earrings")
+            div.caption
+            h4.Thumbnail.mt-2 E011
+            p.price $65 CAD
+          button.btn.btn-light.stayBtn(type="submit") Add to Bag
+
+      div.col-sm-6.col-md-4.col-lg-3.mt-3.category
+        div.thumbnail
+          a(aria-current="page", href="/Earrings")
+            img.prod(src="/images/jesus-eca-Tqnxvv2fvAc-unsplash.jpg", alt="Earrings")
+            div.caption
+            h4.Thumbnail.mt-2 E012
+            p.price $65 CAD
+          button.btn.btn-light.stayBtn(type="submit") Add to Bag

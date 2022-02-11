@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Great+Vibes&family=Nunito&family=Raleway&display=swap");
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font: normal 1.1em/1.2 "Raleway", sans-serif;
+  font-weight: 400;
+  margin: 0;
+  background-color: #fdf7e8;
+  padding-top: 80px;
+  line-height: 1.3em;
+}
+
+#logo {
+  font-family: "Dancing Script", cursive;
+  font-size: xx-large;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.nav-link {
+  color: black;
+}
+.background-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 1rem;
+  max-width: 100%;
+}
+.top {
+  background-color: #dad0e2;
+  top: 0;
+  width: 100%;
+  font-size: small;
+  font-weight: 700;
+  font-family: "Nunito", sans-serif;
+}
+ul.list-unstyled.list-inline {
+  margin-top: 1rem;
+}
+footer {
+  font-family: "Nunito", sans-serif;
+  background-color: #dad0e2;
+  margin-top: 2rem;
+}
+.right {
+  float: right;
+}
+
+.thumbnail img {
+  width: 174px;
+  height: 260px;
+  object-fit: cover;
+}
+.thumbnailColl img {
+  width: 217.5px;
+  height: 325px;
+  object-fit: cover;
+}
+a .prod {
+  width: 228px;
+  height: 228px;
+}
+.page-title {
+  text-align: center;
+}
+.thumbnail a {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+}
+.thumbnail:hover {
+  background-color: antiquewhite;
+  font-weight: 900;
+}
+.thumbnail {
+  font-family: "Nunito", sans-serif;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.page-title {
+  position: relative;
+  font-size: 30px;
+  z-index: 1;
+  overflow: hidden;
+  text-align: center;
+}
+.page-title:before,
+.page-title:after {
+  position: absolute;
+  top: 51%;
+  overflow: hidden;
+  width: 50%;
+  height: 1px;
+  content: "\a0";
+  background-color: black;
+}
+.page-title:before {
+  margin-left: -50%;
+  text-align: right;
+}
+.stay,
+.stayForm {
+  text-align: left;
+}
+.stayForm {
+  line-height: 2rem;
+}
+.stayBtn {
+  border: 1px solid black;
+}
+.form-control {
+  border-bottom: 1px solid black;
+}
+.stayLabel,
+.form-control {
+  margin-bottom: 0.5rem;
+}
+.list_manage {
+  display: flex;
+  float: right;
+  margin-top: 1rem;
+  margin-right: 2.5rem;
+}
+
+.btn:hover {
+  background-color: gray;
+  color: white;
+}
+.nav .nav-link {
+  letter-spacing: 0.2rem;
+}
+.nav .nav-link:hover {
+  background-color: antiquewhite;
+  border-radius: 10px;
+  color: black;
+  font-weight: 900;
+}
+#site-name {
+  padding-top: 2rem;
+}
+a:hover {
+  color: black;
+}
+
+.category .thumbnail {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+.category .thumbnail button {
+  max-width: max-content;
+  align-self: center;
+}

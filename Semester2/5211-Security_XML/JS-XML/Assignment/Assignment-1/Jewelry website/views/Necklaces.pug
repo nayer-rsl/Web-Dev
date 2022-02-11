@@ -1,0 +1,125 @@
+extends layout
+
+block layout-content
+  div.content
+    h1.page-title 
+    img#billboard.background-image(src="/images/Nechlacecategory.jpg", alt="A woman wearing a necklace")
+
+    div.row.list_manage
+      div.inner.clearfix
+        form.form_sort(action="#" method="post")
+        div
+          h6.manage_title Sort by: 
+            select.select_styled.white_select#sort_list(name="sort_list")
+              option(value="1" data-sort="ladd") Most Popular
+              option(value="2" data-sort="ladd") Latest Added
+              option(value="3" selected="" data-sort="price") Price High - Low
+              option(value="4" data-sort="loc") Price Low - High
+
+    div.row.mt-5.Necklaces
+      div.col-sm-6.col-md-4.col-lg-3.mt-3.category
+        div.thumbnail
+          a(aria-current="page", href="/Necklaces")
+            img.prod(src="/images/laura-ohlman--PftP6az2es-unsplash.jpg", alt="Necklace")   
+            div.caption
+            h4.Thumbnail.mt-2 N001
+            p.price $65 CAD
+          button.btn.btn-light.stayBtn(type="submit") Add to Bag  
+
+      div.col-sm-6.col-md-4.col-lg-3.mt-3.category
+        div.thumbnail
+          a(aria-current="page", href="/Necklaces")
+            img.prod(src="/images/content-pixie-Hn4a5FahB8M-unsplash.jpg", alt="Necklace")
+            div.caption
+            h4.Thumbnail.mt-2 N002
+            p.price $65 CAD
+          button.btn.btn-light.stayBtn(type="submit") Add to Bag
+          
+      div.col-sm-6.col-md-4.col-lg-3.mt-3.category
+        div.thumbnail
+          a(aria-current="page", href="/Necklaces")
+            img.prod(src="/images/anastasia-anastasia-RqEfgtjqxmI-unsplash.jpg", alt="Necklace")
+            div.caption
+            h4.Thumbnail.mt-2 N003
+            p.price $65 CAD
+          button.btn.btn-light.stayBtn(type="submit") Add to Bag
+
+      div.col-sm-6.col-md-4.col-lg-3.mt-3.category
+        div.thumbnail
+          a(aria-current="page", href="/Necklaces")
+            img.prod(src="/images/content-pixie-cEEf_RW-oIQ-unsplash.jpg", alt="Necklace")
+            div.caption
+            h4.Thumbnail.mt-2 N004
+            p.price $65 CAD
+          button.btn.btn-light.stayBtn(type="submit") Add to Bag            
+
+      div.col-sm-6.col-md-4.col-lg-3.mt-3.category
+        div.thumbnail
+          a(aria-current="page", href="/Necklaces")
+            img.prod(src="/images/joeyy-lee-3xPRyaxiJfA-unsplash.jpg", alt="Necklace")
+            div.caption
+            h4.Thumbnail.mt-2 N005
+            p.price $65 CAD
+          button.btn.btn-light.stayBtn(type="submit") Add to Bag
+
+      div.col-sm-6.col-md-4.col-lg-3.mt-3.category
+        div.thumbnail
+          a(aria-current="page", href="/Necklaces")
+            img.prod(src="/images/daihana-monares-GlLbvZGoCPQ-unsplash.jpg", alt="Necklace")
+            div.caption
+            h4.Thumbnail.mt-2 N006
+            p.price $65 CAD
+          button.btn.btn-light.stayBtn(type="submit") Add to Bag
+
+      div.col-sm-6.col-md-4.col-lg-3.mt-3.category
+        div.thumbnail
+          a(aria-current="page", href="/Necklaces")
+            img.prod(src="/images/kate-hliznitsova-ceSCZzjTReg-unsplash.jpg", alt="Necklace")
+            div.caption
+            h4.Thumbnail.mt-2 N007
+            p.price $65 CAD
+          button.btn.btn-light.stayBtn(type="submit") Add to Bag
+
+      div.col-sm-6.col-md-4.col-lg-3.mt-3.category
+        div.thumbnail
+          a(aria-current="page", href="/Necklaces")
+            img.prod(src="/images/max-ducourneau-6uv43p1ePrk-unsplash.jpg", alt="Necklace")
+            div.caption
+            h4.Thumbnail.mt-2 N008
+            p.price $65 CAD
+          button.btn.btn-light.stayBtn(type="submit") Add to Bag
+      div.col-sm-6.col-md-4.col-lg-3.mt-3.category
+        div.thumbnail
+          a(aria-current="page", href="/Necklaces")
+            img.prod(src="/images/natalie-sysko-0IOY1_3d-r0-unsplash.jpg", alt="Necklace")
+            div.caption
+            h4.Thumbnail.mt-2 N009
+            p.price $65 CAD
+          button.btn.btn-light.stayBtn(type="submit") Add to Bag
+
+      div.col-sm-6.col-md-4.col-lg-3.mt-3.category
+        div.thumbnail
+          a(aria-current="page", href="/Necklaces")
+            img.prod(src="/images/natalie-sysko--sphpPwAFAE-unsplash.jpg", alt="Necklace")
+            div.caption
+            h4.Thumbnail.mt-2 N010
+            p.price $65 CAD
+          button.btn.btn-light.stayBtn(type="submit") Add to Bag
+
+      div.col-sm-6.col-md-4.col-lg-3.mt-3.category
+        div.thumbnail
+          a(aria-current="page", href="/Necklaces")
+            img.prod(src="/images/mathilde-langevin-QgK0yj6kc6k-unsplash.jpg", alt="Necklace")
+            div.caption
+            h4.Thumbnail.mt-2 N011
+            p.price $65 CAD
+          button.btn.btn-light.stayBtn(type="submit") Add to Bag
+
+      div.col-sm-6.col-md-4.col-lg-3.mt-3.category
+        div.thumbnail
+          a(aria-current="page", href="/Necklaces")
+            img.prod(src="/images/mariana-beltran-ub9fS2bNSU8-unsplash.jpg", alt="Necklace")
+            div.caption
+            h4.Thumbnail.mt-2 N012
+            p.price $65 CAD
+          button.btn.btn-light.stayBtn(type="submit") Add to Bag
