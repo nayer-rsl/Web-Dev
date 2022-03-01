@@ -13,13 +13,13 @@
         <input type="text" name="CountryID" value="@Model.SelectedCountry.CountryID" />
     </div>
     <div>
-        <label>Name:</label> <input type="text" name="CountryName" value="@Model.SelectedCountry.CountryName" />
+        <label >Name:</label> <input  type="text" name="CountryName" value="@Model.SelectedCountry.CountryName" />
     </div>
     <div>
-        <label>Continent:</label> <input type="text" name="CountryContinent" value="@Model.SelectedCountry.CountryContinent" />
+        <label>Continent:</label> <input  type="text" name="CountryContinent" value="@Model.SelectedCountry.CountryContinent" />
     </div>
     <div>
-        <label>Language ID:</label>
+        <label >Language ID:</label>
 
         <select name="LanguageID">
             @foreach (var language in Model.LanguageOptions)
@@ -39,3 +39,20 @@
 
     </div>
 </form>
+
+<style>
+    .title {
+        padding: 10px;
+    }
+
+    form {
+        width: 500px;
+    }
+
+    label {
+        width: 170px;
+    }
+    label, input {
+        margin-top: 13px;
+    }
+</style>

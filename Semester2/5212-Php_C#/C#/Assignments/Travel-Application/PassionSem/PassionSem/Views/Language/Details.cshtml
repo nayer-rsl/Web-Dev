@@ -18,7 +18,26 @@
     <h3>Countries speaking this Language: </h3>
     @foreach (var country in Model.SpokenCountries)
     {
-        <a href="/Country/Details/@country.CountryID">@country.CountryName</a>
+<h2><a href="/Country/Details/@country.CountryID">@country.CountryName,</a></h2>
 
     }
 </div>
+<style>
+    .title {
+        padding: 10px;
+    }
+
+    form {
+        width: 500px;
+    }
+
+    label {
+        width: 170px;
+    }
+
+    label, input {
+        margin-top: 13px;
+    }
+
+
+</style>

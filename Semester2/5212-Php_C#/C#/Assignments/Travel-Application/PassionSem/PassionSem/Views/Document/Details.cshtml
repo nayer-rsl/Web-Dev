@@ -20,7 +20,24 @@
     <h3>Necessary for:</h3>
     @foreach (var country in Model.NeedCountries)
     {
-        <a href="/Country/Details/@country.CountryID">@country.CountryName</a><br />
+<h2><a href="/Country/Details/@country.CountryID">@country.CountryName,</a></h2>
 
     }
 </div>
+<style>
+    .title {
+        padding: 10px;
+    }
+
+    form {
+        width: 500px;
+    }
+
+    label {
+        width: 170px;
+    }
+
+    label, input {
+        margin-top: 13px;
+    }
+</style>
