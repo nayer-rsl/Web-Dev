@@ -89,7 +89,7 @@ namespace PassionSem.Controllers
         /// </example>
         [HttpGet]
         [ResponseType(typeof(DocumentDto))]
-        public IHttpActionResult ListDocumentsNotCaringForCountry(int id)
+        public IHttpActionResult listDocumentsNotForCountry(int id)
         {
             List<Document> Documents = db.Documents.Where(
                 d => !d.Countries.Any(

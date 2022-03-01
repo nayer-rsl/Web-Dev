@@ -66,9 +66,10 @@ namespace PassionSem.Controllers
 
             ViewModel.NecessaryDocuments = NecessaryDocuments;
 
-            url = "documentdata/listdocumentsnotforcountry/" + id;
+            url = "documentdata/listDocumentsNotForCountry/" + id;
             response = client.GetAsync(url).Result;
             IEnumerable<DocumentDto> AvailableDocuments = response.Content.ReadAsAsync<IEnumerable<DocumentDto>>().Result;
+
 
             ViewModel.AvailableDocuments = AvailableDocuments;
 

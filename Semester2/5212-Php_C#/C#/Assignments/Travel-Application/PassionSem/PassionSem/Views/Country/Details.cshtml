@@ -16,7 +16,7 @@
 <div>Language: @Model.SelectedCountry.LanguageName</div>
 
 <div>
-    <h2>Documents Responsible for @Model.SelectedCountry.CountryName:</h2>
+    <h2>Documents necessary for @Model.SelectedCountry.CountryName:</h2>
     @foreach (var document in Model.NecessaryDocuments)
     {
 
@@ -24,13 +24,13 @@
     }
 
     <div>
-        <h4>Add new Document to take care of @Model.SelectedCountry.CountryName</h4>
+        <h4>Add new Document to necessary for @Model.SelectedCountry.CountryName</h4>
         <form method="POST" action="/Country/Associate/@Model.SelectedCountry.CountryID">
             <select name="DocumentID">
-                @foreach (var document in Model.AvailableDocuments)
-                {
-                    <option value="@document.DocumentID">@document.DocumentName</option>
-                }
+                   @foreach (var document in Model.AvailableDocuments)
+        {
+            <option value="@document.DocumentID">@document.DocumentName</option>
+        }
 
             </select>
             <input type="submit" value="Associate Document" />

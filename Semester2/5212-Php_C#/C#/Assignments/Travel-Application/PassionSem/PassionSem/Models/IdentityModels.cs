@@ -25,8 +25,9 @@ namespace PassionSem.Models
         {
         }
         //add entities to system
-        public DbSet<Language> Languages { get; set; }
         public DbSet<Country> Countries { get; set; }
+
+        public DbSet<Language> Languages { get; set; }
         public DbSet<Document> Documents { get; set; }
 
         public static ApplicationDbContext Create()
