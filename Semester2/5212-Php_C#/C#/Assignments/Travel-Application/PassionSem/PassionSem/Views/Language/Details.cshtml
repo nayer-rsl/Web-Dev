@@ -16,7 +16,7 @@
 
 <div style="margin-top:100px;">
     <h3>Countries related to this Language</h3>
-    @foreach (var country in Model.RelatedCountries)
+    @foreach (var country in Model.SpokenCountries)
     {
         <a href="/Country/Details/@country.CountryID">@country.CountryName</a>
 

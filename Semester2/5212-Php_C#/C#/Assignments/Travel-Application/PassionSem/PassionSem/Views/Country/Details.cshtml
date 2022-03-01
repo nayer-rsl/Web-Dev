@@ -17,7 +17,7 @@
 
 <div>
     <h2>Documents Responsible for @Model.SelectedCountry.CountryName:</h2>
-    @foreach (var document in Model.ResponsibleDocuments)
+    @foreach (var document in Model.NecessaryDocuments)
     {
 
         <a href="/Document/Details/@document.DocumentID">@document.DocumentName</a> <a style="color:#ab2020;" href="/Country/Unassociate/@Model.SelectedCountry.CountryID?DocumentID=@document.DocumentID">[x]</a><br />
